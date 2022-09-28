@@ -80,6 +80,7 @@ class TestAllMethods(unittest.TestCase):
 	def test_count_a(self):
 		cnt = count_a("aaaa")
 		self.assertEqual(cnt,4)
+
 		acnt = count_a("abcabc")
 		self.assertEqual(acnt,2)
 		
@@ -95,8 +96,8 @@ class TestAllMethods(unittest.TestCase):
 	## Check to see whether warehouse correctly returns the item with the most stock
 	def test_warehouse_max_stocks(self):
 		Costco = Warehouse([self.item1, self.item2, self.item4])
-		m_stock = Costco.get_max_stock()
-		self.assertEqual(m_stock, self.item4)
+		m_s = Costco.get_max_stock()
+		self.assertEqual(m_s, self.item4)
 
 
 	# Check to see whether the warehouse correctly return the item with the highest price
